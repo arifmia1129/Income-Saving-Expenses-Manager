@@ -80,7 +80,7 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
 
 
 // last calculation part 
-
+//event handler for save button click
 document.getElementById("saving-btn").addEventListener("click", function () {
     const totalIncome = getInputValue("total-income");
     const savingField = parseFloat(document.getElementById("saving-field").value);

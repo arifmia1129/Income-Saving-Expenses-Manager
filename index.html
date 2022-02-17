@@ -19,25 +19,19 @@
 
     <!-- header part start  -->
     <header>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid text-wrap">
-                <a class="navbar-brand mx-auto" href="#">
-                    <!-- main header with icon  -->
-                    <div class="text-wrap fs-2 fw-bold">
-                        <span class="text-success">Income,</span> <span id="saving">Saving</span id="and"> & <span
-                            class="text-danger">Expenses
-                        </span>Manager
-                        <span id="money-icon">
-                            <svg width="35" xmlns="http://www.w3.org/2000/svg" class="text-primary" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </span>
-                    </div>
-                </a>
-            </div>
-        </nav>
+        <!-- main header with icon  -->
+        <div class="text-wrap fs-2 fw-bold text-center mt-3">
+            <span class="text-success">Income,</span> <span id="saving">Saving</span id="and"> & <span
+                class="text-danger">Expenses
+            </span>Manager
+            <span id="money-icon">
+                <svg width="35" xmlns="http://www.w3.org/2000/svg" class="text-primary" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </span>
+        </div>
     </header>
 
     <!-- main part start  -->
@@ -92,6 +86,7 @@
                         <div id="error-show-middle">
 
                         </div>
+                        <!-- middle part calculation error show part -->
                         <div id="error-show-middle">
 
                         </div>
@@ -100,7 +95,7 @@
                             <h5 class="fw-bold">Balance : <span id="available-balance">0</span></h5>
                         </div>
 
-                        <!-- lower calculation part -->
+                        <!-- last calculation part -->
                         <div class="d-lg-flex d-md-block justify-content-start align-items-center my-5">
                             <p class="px-3 fs-5 fw-bold pt-2">Save :</p>
                             <input type="text" name="" id="saving-field" class="w-25 p-2 form-control d-inline">
