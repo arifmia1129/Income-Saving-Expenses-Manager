@@ -42,13 +42,21 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
     const totalExpenses = foodExpenses + rentExpenses + clothesExpenses;
     const availableBalance = totalIncome - totalExpenses;
 
-    // show total Expenses
-    const previousExpenses = getInnerTextValue("total-expenses");
-    previousExpenses.innerText = parseFloat(previousExpenses.innerText) + totalExpenses;
+    if (totalIncome >= totalExpenses) {
+        // show total Expenses
+        const previousExpenses = getInnerTextValue("total-expenses");
+        previousExpenses.innerText = totalExpenses;
 
-    //available balance
-    const previousBalance = getInnerTextValue("available-balance");
-    previousBalance.innerText = parseFloat(previousBalance.innerText) + availableBalance;
+        //available balance
+        const previousBalance = getInnerTextValue("available-balance");
+        previousBalance.innerText = availableBalance;
+    }
+    else {
+        const h5 = document.createElement("h5");
+        h5.className = "text-white bg-success p-2 text-center";
+        h5.innerText = "Expenses is greater than income.";
+        document.getElementById("error-show-middle").appendChild(h5);
+    }
 
 
 
