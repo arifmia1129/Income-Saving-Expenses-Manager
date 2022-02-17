@@ -1,4 +1,12 @@
+/* google font import  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+
+/* whole body */
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
 #calculation-part{
-    background-color: rgba(219, 219, 219, 0.5);
+    background-color: rgba(235, 233, 233, 0.5);
 }
