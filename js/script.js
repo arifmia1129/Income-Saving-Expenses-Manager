@@ -23,11 +23,17 @@ function getInputValue(fieldId) {
 
 
 //function declare for using innertext
-function getInnerTextValue(id) {
+function getInnerTextValue(id, availableAmount) {
     const previousAmount = document.getElementById(id);
-    return previousAmount;
+    previousAmount.innerText = availableAmount;
 }
 
+
+// function declare for clear input Field after click button 
+
+function clearField(id) {
+    document.getElementById(id).value = "";
+}
 
 //event handler for calculate button
 document.getElementById("calculate-btn").addEventListener("click", function () {
@@ -44,12 +50,16 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
 
     if (totalIncome >= totalExpenses) {
         // show total Expenses
-        const previousExpenses = getInnerTextValue("total-expenses");
-        previousExpenses.innerText = totalExpenses;
+        const previousExpenses = getInnerTextValue("total-expenses", totalExpenses);
 
         //available balance
-        const previousBalance = getInnerTextValue("available-balance");
-        previousBalance.innerText = availableBalance;
+        const previousBalance = getInnerTextValue("available-balance", availableBalance);
+    }
+    else if (isNaN(totalExpenses) || (isNaN(availableBalance))) {
+        const h5 = document.createElement("h5");
+        h5.className = "text-white bg-danger p-2 text-center";
+        h5.innerText = "Upper income and expenses field is empty.";
+        document.getElementById("error-show-middle").appendChild(h5);
     }
     else {
         const h5 = document.createElement("h5");
@@ -59,6 +69,51 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
     }
 
 
+    // function call for clear input field after click calculate button 
+
+    clearField("food-expenses");
+    clearField("rent-expenses");
+    clearField("clothes-expenses");
 
 
-})
+});
+
+
+// last calculation part 
+
+document.getElementById("saving-btn").addEventListener("click", function () {
+    const totalIncome = getInputValue("total-income");
+    const savingField = parseFloat(document.getElementById("saving-field").value);
+    const savingAmount = document.getElementById("saving-amount");
+    const remainingBalance = document.getElementById("remaining-balance");
+
+    const availableBalance = parseFloat(document.getElementById("available-balance").innerText);
+    const totalExpenses = parseFloat(document.getElementById("total-expenses").innerText);
+    //check input value validation
+    if (savingField >= 0) {
+        const parsentedAmount = totalIncome * savingField / 100;
+        if (availableBalance >= parsentedAmount) {
+            savingAmount.innerText = parsentedAmount;
+            remainingBalance.innerText = availableBalance - parsentedAmount;
+            console.log(remainingBalance.innerText);
+        }
+        else {
+            const h5 = document.createElement("h5");
+            h5.className = "text-white bg-danger p-2 text-center";
+            h5.innerText = "# Available balance is less then saving amount that you want save.";
+            document.getElementById("error-show-last").appendChild(h5);
+        }
+    }
+    else if (savingField < 0) {
+        const h5 = document.createElement("h5");
+        h5.className = "text-white bg-danger p-2 text-center";
+        h5.innerText = "# Invalid input type for negative number.";
+        document.getElementById("error-show-last").appendChild(h5);
+    }
+    else {
+        const h5 = document.createElement("h5");
+        h5.className = "text-white bg-success p-2 text-center";
+        h5.innerText = "# Invalid input type for empty field or string.";
+        document.getElementById("error-show-last").appendChild(h5);
+    }
+});

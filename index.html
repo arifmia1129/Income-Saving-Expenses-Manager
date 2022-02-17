@@ -103,13 +103,17 @@
                         <!-- lower calculation part -->
                         <div class="d-lg-flex d-md-block justify-content-start align-items-center my-5">
                             <p class="px-3 fs-5 fw-bold pt-2">Save :</p>
-                            <input type="text" name="" id="" class="w-25 p-2 form-control d-inline">
+                            <input type="text" name="" id="saving-field" class="w-25 p-2 form-control d-inline">
                             <p class="px-3 fs-5 fw-bold pt-2">%</p>
-                            <button class="btn btn-primary px-5 py-1 fw-bold fs-5">Save</button>
+                            <button class="btn btn-primary px-5 py-1 fw-bold fs-5" id="saving-btn">Save</button>
+                        </div>
+
+                        <div id="error-show-last">
+
                         </div>
                         <div class="text-center">
-                            <h5 class="fw-bold">Saving Amount : <span>0</span></h5>
-                            <h5 class="fw-bold">Remaining Balance : <span>0</span></h5>
+                            <h5 class="fw-bold">Saving Amount : <span id="saving-amount">0</span></h5>
+                            <h5 class="fw-bold">Remaining Balance : <span id="remaining-balance">0</span></h5>
                         </div>
                     </div>
                 </div>
