@@ -116,4 +116,5 @@ document.getElementById("saving-btn").addEventListener("click", function () {
         h5.innerText = "# Invalid input type for empty field or string.";
         document.getElementById("error-show-last").appendChild(h5);
     }
+    clearField("saving-field");
 });
