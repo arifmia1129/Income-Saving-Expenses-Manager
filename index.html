@@ -20,7 +20,7 @@
     <!-- header part start  -->
     <header>
         <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid text-sm-wrap">
+            <div class="container-fluid text-wrap">
                 <a class="navbar-brand mx-auto" href="#">
                     <!-- main header with icon  -->
                     <div class="text-wrap fs-2 fw-bold">
@@ -28,7 +28,7 @@
                             class="text-danger">Expenses
                         </span>Manager
                         <span id="money-icon">
-                            <svg width="40" xmlns="http://www.w3.org/2000/svg" class="text-primary" fill="none"
+                            <svg width="35" xmlns="http://www.w3.org/2000/svg" class="text-primary" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M11 11V9a2 2 0 00-2-2m2 4v4a2 2 0 104 0v-1m-4-3H9m2 0h4m6 1a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -46,15 +46,23 @@
 
             <!-- declare row and column -->
             <div class="row">
+
+                <!-- left side part  -->
                 <div class="col-lg-7 col-md-12">
                     <div class="d-flex justify-content-center align-items-center">
                         <img class="img-fluid" src="images/main-images.jpg" alt="">
                     </div>
                 </div>
+
+                <!-- right side part  -->
                 <div class="col-lg-5 col-md-12 rounded-3" id="calculation-part">
+
+                    <!-- declare div for show error when user input is invalid -->
                     <div id="error-show">
 
                     </div>
+
+                    <!-- upper calculation part  -->
                     <div class="p-2 text-center ">
                         <h4 class="text-center my-3 fw-bold">Income</h4>
                         <p class="fw-bold">Income : <input type="text" name="total-income" id="total-income"
@@ -77,10 +85,19 @@
                         <div class="text-center my-5">
                             <button id="calculate-btn" class="btn btn-primary px-5 py-2 fw-bold fs-5">Calculate</button>
                         </div>
+
+                        <!-- middle calculation part  -->
+
+
+                        <div id="error-show-middle">
+
+                        </div>
                         <div class="text-center">
                             <h5 class="fw-bold">Total Expenses : <span id="total-expenses">0</span></h5>
                             <h5 class="fw-bold">Balance : <span id="available-balance">0</span></h5>
                         </div>
+
+                        <!-- lower calculation part -->
                         <div class="d-lg-flex d-md-block justify-content-start align-items-center my-5">
                             <p class="px-3 fs-5 fw-bold pt-2">Save :</p>
                             <input type="text" name="" id="" class="w-25 p-2 form-control d-inline">
@@ -96,6 +113,8 @@
             </div>
         </section>
     </main>
+
+    <!-- end main part  -->
 
     <!-- javascript connect  -->
     <script src="js/script.js"></script>

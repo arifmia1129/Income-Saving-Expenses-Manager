@@ -8,9 +8,13 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+/* main header text color change by using id  */
 #saving{
     color:rgb(90, 212, 53);
 }
+
+
+/* right side part background color  */
 #calculation-part{
     background-color: rgba(235, 233, 233, 0.5);
 }
