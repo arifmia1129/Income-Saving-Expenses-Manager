@@ -24,8 +24,8 @@
                 <a class="navbar-brand mx-auto" href="#">
                     <!-- main header with icon  -->
                     <div class="text-wrap fs-2 fw-bold">
-                        <span class="text-success">Income,</span> <span class="text-warning" id="saving">Saving</span
-                            id="and"> & <span class="text-danger">Expenses
+                        <span class="text-success">Income,</span> <span id="saving">Saving</span id="and"> & <span
+                            class="text-danger">Expenses
                         </span>Manager
                         <span id="money-icon">
                             <svg width="40" xmlns="http://www.w3.org/2000/svg" class="text-primary" fill="none"
@@ -52,28 +52,34 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-12 rounded-3" id="calculation-part">
+                    <div id="error-show">
+
+                    </div>
                     <div class="p-2 text-center ">
                         <h4 class="text-center my-3 fw-bold">Income</h4>
-                        <p class="fw-bold">Income : <input type="text" name="" id="" placeholder="Total income amount"
-                                class="w-75 p-2 form-control d-inline">
+                        <p class="fw-bold">Income : <input type="text" name="total-income" id="total-income"
+                                placeholder="Total income amount" class="w-75 p-2 form-control d-inline">
                         </p>
                         <h4 class="text-center my-3 fw-bold">Expenses</h4>
-                        <p class="fw-bold"><span class="pe-4">Food :</span> <input type="text" name="" id=""
-                                placeholder="Food expenses amount" class="w-75 p-2 form-control d-inline">
+                        <p class="fw-bold"><span class="pe-4">Food :</span> <input type="text" name=""
+                                id="food-expenses" placeholder="Food expenses amount"
+                                class="w-75 p-2 form-control d-inline">
                         </p>
-                        <p class="fw-bold"><span class="pe-4">Rent :</span> <input type="text" name="" id=""
-                                placeholder="Rent expenses amount" class="w-75 p-2 form-control d-inline">
+                        <p class="fw-bold"><span class="pe-4">Rent :</span> <input type="text" name=""
+                                id="rent-expenses" placeholder="Rent expenses amount"
+                                class="w-75 p-2 form-control d-inline">
                         </p>
-                        <p class="fw-bold"><span class="pe-1">Clothes :</span> <input type="text" name="" id=""
-                                placeholder="Clothes expenses amount" class="w-75 p-2 form-control d-inline">
+                        <p class="fw-bold"><span class="pe-1">Clothes :</span> <input type="text" name=""
+                                id="clothes-expenses" placeholder="Clothes expenses amount"
+                                class="w-75 p-2 form-control d-inline">
                         </p>
 
                         <div class="text-center my-5">
-                            <button class="btn btn-primary px-5 py-2 fw-bold fs-5">Calculate</button>
+                            <button id="calculate-btn" class="btn btn-primary px-5 py-2 fw-bold fs-5">Calculate</button>
                         </div>
                         <div class="text-center">
-                            <h5 class="fw-bold">Total Expenses : <span>0</span></h5>
-                            <h5 class="fw-bold">Balance : <span>0</span></h5>
+                            <h5 class="fw-bold">Total Expenses : <span id="total-expenses">0</span></h5>
+                            <h5 class="fw-bold">Balance : <span id="available-balance">0</span></h5>
                         </div>
                         <div class="d-lg-flex d-md-block justify-content-start align-items-center my-5">
                             <p class="px-3 fs-5 fw-bold pt-2">Save :</p>

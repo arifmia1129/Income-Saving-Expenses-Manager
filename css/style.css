@@ -7,6 +7,10 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+#saving{
+    color:rgb(90, 212, 53);
+}
 #calculation-part{
     background-color: rgba(235, 233, 233, 0.5);
 }
